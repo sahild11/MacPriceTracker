@@ -21,7 +21,7 @@ b_and_h =tree.xpath(  '//div[contains(@class,"cell five")]/a/text()')
 data=pd.DataFrame({'product': products,'apple': apple,'amazon': amazon, 'adorama': adorama, 'macmall':macmall,'bestbuy':bestbuy,'b_and_h':b_and_h})
 #add date to data frame
 dt=datetime.datetime.today()
-data['date']=dt.strftime("%m/%d/%Y")
+data['date']=dt.strftime("%#m/%#d/%Y")
 #Remove commas from apple, amazon, adorama, macmall, bestbuy, b_and_h
 cols = ['apple', 'amazon','adorama','macmall','bestbuy','b_and_h']
 # pass them to df.replace(), specifying each char and it's replacement:
